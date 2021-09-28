@@ -19,9 +19,9 @@
 
     <div class="row container mt-2 ">
       <div id="divButtons" class="col text-center">
-        <button id="btnNew" class="btn btn-primary">New Game</button>
-        <button id="btnTake" class="btn btn-primary">Take a card</button>
-        <button id="btnStop" class="btn btn-danger">Stop</button>
+        <button id="btnNew"  class="btn btn-primary">New Game</button>
+        <button id="btnTake" disabled="disabled" class="btn btn-primary">Take a card</button>
+        <button id="btnStop" disabled="disabled" class="btn btn-danger">Stop</button>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
         <h1 style="font-size:2rem;">
           Player 1: <small style="font-size:2rem;">0</small> points
         </h1>
-        <div id="player-cards">
+        <div id="player-cards" class="divCards">
         </div>
       </div>
     </div>
@@ -40,12 +40,16 @@
         <h1 style="font-size:2rem;">
           Computer: <small style="font-size:2rem;">0</small> points
         </h1>
-        <div id="computer-cards">
+        <div id="computer-cards" class="divCards">
         </div>
       </div>
     </div>
 
     <script src="assets/js/underscore-min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app-min.js"></script>
+
+    <script>
+      Game.newGame();
+    </script>
   </body>
 </html>

@@ -17,14 +17,14 @@ const Game = (() => {
   const startGame = (playersNum = 2) => {
     deck = createDeck();
     playersPoints = [];
-    for( let i = 0; i<playersNum; i++ ){
+    for (let i = 0; i < playersNum; i++) {
       playersPoints.push(0)
     }
 
-    gamePoints.forEach( elem => elem.innerText = 0 )
+    gamePoints.forEach(elem => elem.innerText = 0)
 
     // Reset screen points and cards
-    divPlayersCards.forEach( elem => elem.innerText = '')
+    divPlayersCards.forEach(elem => elem.innerText = '')
 
     // Enable buttons
     btnTake.disabled = false;
@@ -66,21 +66,21 @@ const Game = (() => {
   };
 
   // Turn: 0 = first player and last = computer.
-  const acumPoints = ( card,turn ) =>{
+  const acumPoints = (card, turn) => {
     playersPoints[turn] += cardValue(card);
     gamePoints[turn].innerHTML = "<b>" + playersPoints[turn] + "</b>";
     return playersPoints[turn];
   }
 
-  const createCard = (card, turn) =>{
+  const createCard = (card, turn) => {
     const cardImg = document.createElement("img");
     cardImg.src = `assets/cartas/${card}.png`;
     cardImg.classList.add('cards');
     divPlayersCards[turn].append(cardImg);
   }
 
-  const winner = () =>{
-    const [ minPoints,computerPoints ] = playersPoints;
+  const winner = () => {
+    const [minPoints, computerPoints] = playersPoints;
     setTimeout(() => {
       if (computerPoints === minPoints) {
         alert("Tie");
@@ -88,10 +88,10 @@ const Game = (() => {
         alert("Computer Won");
       } else if (computerPoints > 21) {
         alert("Player 1 Won");
-      }else{
+      } else {
         alert('Computer Won')
       }
-    }, 100 );
+    }, 100);
   }
 
   // Computer Turn.
@@ -139,7 +139,7 @@ const Game = (() => {
     startGame()
   });
 
-  return{
+  return {
     newGame: startGame
   };
 })();

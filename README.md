@@ -1,3 +1,3 @@
 # Blackjack
 
-This is the code of my blackjack in javascript
+This is the code of my blackjack in javascript with a min js

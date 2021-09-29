@@ -2,7 +2,7 @@
 
 This is the code of my blackjack in javascript with a min js.
 
-If you want to see the game you can go to this page: https://yeralditrev.github.io/
+If you want to see the game you can go to this page: https://yeralditrev.github.io/Blackjack/
 
 # Blackjack Game Image.
 ![image](https://user-images.githubusercontent.com/73792677/135196832-5442252b-b3ef-482b-9640-588bf1997cd8.png)
